@@ -6,9 +6,16 @@ import uvicorn
 from ge_service.services.database_service import database_app
 from ge_service.services.database_service import account_manager
 
-
-async def prelaunch():
-    pass
+async def prelaunch():    
+    discord_account = await account_manager.DiscordAccountModel.get(
+        account_id="1000"
+    )
+    
+    discord_pydantic = await account_manager.discord_account_model_to_pydantic(
+        discord_account
+    )
+    
+    print(discord_pydantic)
 
 
 app = fastapi.FastAPI()

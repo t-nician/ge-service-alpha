@@ -6,11 +6,11 @@ class PlatformAccountType(str, Enum):
     MORDHAU = "mordhau"
 
 
+TORTOISE_MODELS_PATH = "ge_service.database_models"
+
 SQLITE_DATABASE_URL = "sqlite://workspace/database.sqlite3"
 
-
-TORTOISE_MODELS_PATH = "ge_service.database_models"
-FOREIGN_KEY_FIELD_FOR_PRIMARY_ACCOUNT = "models.PrimaryAccount"
+FOREIGN_KEY_FIELD_FOR_PRIMARY_ACCOUNT = "models.PrimaryAccountModel"
 
 TABLE_NAME_PRIMARY_ACCOUNT = "primary_account"
 
